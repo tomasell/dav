@@ -1,0 +1,32 @@
+{
+	"name" : "bread/dav",
+	"description" : "Bread WebDAV library",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Giovanni Lovato",
+			"email" : "heruan@aldu.net"
+		}, {
+			"name" : "Alex Tomasello",
+			"email" : "alex.tomasello@saiv.it"
+		}
+	],
+	"keywords" : [
+		"bread",
+		"dav",
+		"webdav"
+	],
+	"homepage" : "https://github.com/breadphp/dav",
+	"license" : [
+		"CC-BY-3.0"
+	],
+	"require" : {
+		"bread/types" : "~0.1",
+		"php" : ">=5.5",
+		"bread/rest" : "~0.1"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"Bread\\DAV" : "src"
+		}
+	}
+}
