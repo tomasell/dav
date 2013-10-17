@@ -1,30 +1,14 @@
 <?php
-
-namespace Bread\DAV;
+namespace Bread\DAV\Properties;
 
 /**
- * RFC4918 Section 15
+ * RFC4918 Section 3
+ * Live Property - A property whose semantics and syntax are enforced by the server.
  *
- * @see http://tools.ietf.org/html/rfc4918#section-15
+ * http://www.webdav.org/specs/rfc4918.html#rfc.section.3
  */
-trait Properties
+trait Live
 {
-    /**
-     * Records the time and date the resource was created.
-     * 
-     * @see RFC4918 Section 15.1
-     * @var DateTime
-     */
-    public $creationdate;
-    
-    /**
-     * Provides a name for the resource that is suitable for
-     * presentation to a user.
-     * 
-     * @see RFC4918 Section 15.2
-     * @var string
-     */
-    public $displayname;
 
     /**
      * Contains the Content-Language header value (from Section
@@ -66,21 +50,17 @@ trait Properties
     public $getetag;
 
     /**
-     * Contains the Last-Modified header value (from Section
-     * 14.29 of [RFC2616]) as it would be returned by a GET method
-     * without accept headers.
-     * 
-     * @see RFC4918 Section 15.7
-     * @var DateTime
+     * Specifies the nature of the resource.
+     *
+     * @see RFC4918 Section 15.9
      */
-    public $getlastmodified;
+    public $resourcetype;
 
     /**
-     * Describes the active locks on a resource.
+     * To provide a listing of the lock capabilities supported by the resource.
      *
-     * @see RFC4918 Section 15.8
-     * @var string
+     * @see RFC4918 Section 15.10
      */
-    public $lockdiscovery;
+    public  $supportedlock;
 
 }
